@@ -1,10 +1,13 @@
 {
   "name": "node-pokemon",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "0.0.0",
+  "private": true,
   "repository": "https://github.com/alexj01/node-pokemon.git",
   "author": "alexj01 <janus.alex@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "node ./server/bin/www"
+  },
   "dependencies": {
     "@types/body-parser": "^1.16.3",
     "@types/bookshelf": "^0.9.2",
@@ -24,6 +27,7 @@
     "debug": "^2.6.8",
     "express": "^4.15.3",
     "gulp": "^3.9.1",
+    "jade": "^1.11.0",
     "knex": "^0.13.0",
     "morgan": "^1.8.2",
     "pg": "^6.2.4",
