@@ -5,7 +5,6 @@ exports.up = function(knex, Promise) {
     knex.schema.createTable('versions', version => {
         version.increments('id').primary()
         version.string('name')
-        version.
     })
 
     knex.schema.createTable('version_groups', version_group => {
@@ -19,7 +18,17 @@ exports.up = function(knex, Promise) {
     knex.schema.createTable('pokemon', pokemon => {
       pokemon.increments('id').primary()
       pokemon.string('name')
+      pokemon.string('description')
+      pokemon.string('type')
+    })
 
+    knex.schema.createTable('abilities', abilities => {
+      abilities.increments('id').primary()
+      abilities.string('name')
+      abilities.string('class')
+      abitities.string('effect')
+      abilities.number('accuracy')
+      abilities.number('power')
     })
 
   ])
@@ -30,5 +39,6 @@ exports.down = function(knex, Promise) {
       knex.schema.dropTable('versions')
       knex.schema.dropTable('version_groups')
       knex.schema.dropTable('pokemon')
+      knex.schema.dropTable('abilities')
   ])
 };
