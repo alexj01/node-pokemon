@@ -2,8 +2,8 @@
 
 module.exports = {
 
-development: {
-    client: 'pg',
+  development: {
+    client: 'postgresql',
     connection: {
       host: '127.0.0.1',
       user: 'alex',
@@ -14,10 +14,10 @@ development: {
     debug: true,
     migrations: {
       tableName: 'migrations',
-      directory: './database/migrations'
+      directory: './migrations'
     },
     seeds: {
-      directory: 'seeds'
+      directory: './seeds'
     },
     pool: {
       min: 1,
@@ -29,7 +29,7 @@ development: {
     client: 'postgresql',
     connection: {
       database: 'my_db',
-      user:     'username',
+      user: 'username',
       password: 'password'
     },
     pool: {
