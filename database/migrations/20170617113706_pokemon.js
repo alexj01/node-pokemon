@@ -20,12 +20,13 @@ exports.up = function (knex, Promise) {
 
     knex.schema.createTableIfNotExists('pokemon', pokemon => {
       pokemon.increments('id').primary().unsigned().index().notNullable()
-      pokemon.integer('version_id').unsigned()
-      pokemon.foreign('version_id').references('versions.id')
-      pokemon.integer('pokedex_entry_number')
+      pokemon.integer('version_group_id').unsigned()
+      pokemon.foreign('version_group_id').references('version_groups.id')
       pokemon.string('name')
       pokemon.string('description')
       pokemon.string('type')
+      pokemon.string('habitat')
+      pokemon.integer('weight')
       pokemon.timestamps(true, true)
     }),
 
@@ -33,7 +34,8 @@ exports.up = function (knex, Promise) {
       abilities.increments('id').primary().unsigned().index().notNullable()
       abilities.string('name')
       abilities.string('class')
-      abilities.string('effect')
+      abilities.string('type')
+      abilities.integer('effect')
       abilities.integer('accuracy')
       abilities.integer('power')
       abilities.timestamps(true, true)
