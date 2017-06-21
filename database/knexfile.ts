@@ -11,7 +11,7 @@ module.exports = {
       database: 'pokemon',
       charset: 'utf8'
     },
-    debug: true,
+    debug: false,
     migrations: {
       tableName: 'migrations',
       directory: './migrations'
