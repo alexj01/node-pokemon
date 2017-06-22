@@ -6,7 +6,7 @@
   "author": "alexj01 <janus.alex@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start:server": "ENV=development nodemon dist-server/server/bin/www.js",
+    "start:server": "nodemon dist-server/server/bin/www.js",
     "start:local": "concurrently --raw \"npm run start:server\" \"gulp watch\""
   },
   "dependencies": {

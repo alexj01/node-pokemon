@@ -1,4 +1,4 @@
-const knex = require('knex')(require('./knexfile')[process.env.ENV])
+const knex = require('knex')(require('./knexfile')[process.env.ENV || 'development'])
 const bookshelf = require('bookshelf')(knex)
 bookshelf.plugin('registry')
 
