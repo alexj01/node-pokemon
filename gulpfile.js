@@ -2,7 +2,7 @@ var gulp = require('gulp')
 const nodemon = require('nodemon')
 const tsc = require('gulp-typescript')
 const runSequence = require('run-sequence')
-
+const clean = require('gulp-clean')
 
 
 gulp.task('typescript', function () {
@@ -35,6 +35,13 @@ function buildSequenceDev() {
 gulp.task('dev', function () {
     buildSequenceDev()
 });
+
+gulp.task('clean', function () {
+    return gulp.src('dist-server', {
+            read: false
+        })
+        .pipe(clean());
+})
 
 gulp.task('watch', function () {
     gulp.watch('./**/*.ts', ['typescript'])
