@@ -6,7 +6,8 @@
   "author": "alexj01 <janus.alex@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "ENV=development nodemon ./server/bin/www"
+    "start:server": "ENV=development nodemon dist-server/server/bin/www.js",
+    "start:local": "concurrently --raw \"npm run start:server\" \"gulp watch\""
   },
   "dependencies": {
     "@types/body-parser": "^1.16.3",
@@ -23,6 +24,7 @@
     "@types/serve-favicon": "^2.2.28",
     "body-parser": "^1.17.2",
     "bookshelf": "^0.10.3",
+    "concurrently": "^3.5.0",
     "cookie-parser": "^1.4.3",
     "debug": "^2.6.8",
     "express": "^4.15.3",

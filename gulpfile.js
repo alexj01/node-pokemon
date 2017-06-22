@@ -28,8 +28,7 @@ gulp.task('start-server-dev', function () {
 
 function buildSequenceDev() {
     runSequence(
-        'typescript',
-        'start-server-dev'
+        'typescript'
     )
 }
 
@@ -38,7 +37,5 @@ gulp.task('dev', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('./**/*.ts', ['dev'])
+    gulp.watch('./**/*.ts', ['typescript'])
 })
-
-gulp.task('default', ['watch'])
