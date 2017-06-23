@@ -6,8 +6,9 @@
   "author": "alexj01 <janus.alex@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start:server": "nodemon dist-server/server/bin/www.js",
-    "start:local": "concurrently --raw \"npm run start:server\" \"gulp watch\""
+    "start:server": "nodemon dist/app/server/bin/www.js",
+    "start:local": "concurrently --raw \"npm run start:server\" \"gulp watch\"",
+    "test-app": "istanbul cover --include-all-sources jasmine-node --color --verbose spec"
   },
   "dependencies": {
     "@types/body-parser": "^1.16.3",
@@ -20,6 +21,7 @@
     "@types/morgan": "^1.7.32",
     "@types/pg": "^6.1.41",
     "@types/react": "^15.0.28",
+    "@types/react-dom": "^15.5.0",
     "@types/react-router": "^4.0.11",
     "@types/serve-favicon": "^2.2.28",
     "body-parser": "^1.17.2",
@@ -33,15 +35,22 @@
     "nodemon": "^1.11.0",
     "pg": "^6.2.4",
     "react": "^15.6.1",
+    "react-dom": "^15.6.1",
     "react-router": "^4.1.1",
     "serve": "^5.2.2",
     "serve-favicon": "^2.4.3"
   },
   "devDependencies": {
+    "@types/jasmine": "^2.5.52",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-typescript": "^3.1.7",
+    "istanbul": "^0.4.5",
+    "jasmine": "^2.6.0",
+    "jasmine-node": "^1.14.5",
+    "react-scripts": "^1.0.7",
+    "request-promise-native": "^1.0.4",
     "run-sequence": "^1.2.2",
     "typescript": "^2.3.4"
   }

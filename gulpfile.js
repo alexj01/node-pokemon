@@ -9,7 +9,7 @@ gulp.task('typescript', function () {
     const tsProject = tsc.createProject('tsconfig.json')
     const tsResult = tsProject.src()
         .pipe(tsProject());
-    return tsResult.js.pipe(gulp.dest('dist-server'))
+    return tsResult.js.pipe(gulp.dest('dist/app'))
 })
 
 gulp.task('start-server-dev', function () {
@@ -37,7 +37,7 @@ gulp.task('dev', function () {
 });
 
 gulp.task('clean', function () {
-    return gulp.src('dist-server', {
+    return gulp.src(['dist','coverage'], {
             read: false
         })
         .pipe(clean());
