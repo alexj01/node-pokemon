@@ -1,6 +1,6 @@
 #Build files
-dist-server/
-dist-client/
+dist/
+build/
 
 #Test results
 coverage/
