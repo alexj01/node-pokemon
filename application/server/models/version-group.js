@@ -1,4 +1,3 @@
-"use strict";
 var BOOKSHELF = require('../database/bookshelf');
 require('./version');
 require('./pokemon');
@@ -13,4 +12,3 @@ var VersionGroup = BOOKSHELF.Model.extend({
     }
 });
 module.exports = BOOKSHELF.model('VersionGroup', VersionGroup);
-//# sourceMappingURL=version-group.js.map

@@ -1,4 +1,3 @@
-"use strict";
 var Bookshelf = require('../database/bookshelf');
 require('./version-group');
 var Version = Bookshelf.Model.extend({
@@ -9,4 +8,3 @@ var Version = Bookshelf.Model.extend({
     }
 });
 module.exports = Bookshelf.model('Version', Version);
-//# sourceMappingURL=version.js.map

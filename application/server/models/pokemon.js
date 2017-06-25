@@ -1,4 +1,3 @@
-"use strict";
 var Bookshelf = require('../database/bookshelf');
 require('./version-group');
 require('./ability');
@@ -13,4 +12,3 @@ var Pokemon = Bookshelf.Model.extend({
     }
 });
 module.exports = Bookshelf.model('Pokemon', Pokemon);
-//# sourceMappingURL=pokemon.js.map
